@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Arquitectura Von Neumann</title>
+  </head>
+  <body>
+    <section>
+      <div class="unidad-control">
+        <span>Unidad de control</span>
+        <div>
+          <div id="contador">
+            <input type="text" readonly id="contador-input" />
+            <span>Contador</span>
+          </div>
+          <div id="decodificador">
+            <input type="text" readonly id="decodificador-input" />
+            <span>Decodificador</span>
+          </div>
+          <div id="reg-instrucciones">
+            <input type="text" readonly id="reg-instrucciones-input" />
+            <span>Reg. Instrucciones</span>
+          </div>
+        </div>
+      </div>
+      <div class="memoria">
+        <span>Memoria</span>
+        <div>
+          <div id="reg-direcciones">
+            <input type="text" readonly id="reg-direcciones-input" />
+            <span>Reg. Direcciones</span>
+          </div>
+          <div id="tabla-memoria">
+            <table>
+              <tr>
+                <th>Dirección</th>
+                <th>Valor</th>
+              </tr>
+              <tr class="operacion">
+                <td>0000</td>
+                <td>00110001</td>
+              </tr>
+              <tr class="operacion">
+                <td>0001</td>
+                <td>00110100</td>
+              </tr>
+              <tr class="base">
+                <td>0010</td>
+                <td>01100000</td>
+              </tr>
+              <tr class="mover-memoria">
+                <td>0100</td>
+                <td>00110010</td>
+              </tr>
+            </table>
+          </div>
+          <div id="reg-datos">
+            <input type="text" readonly id="reg-datos-input" />
+            <span>Reg. Datos</span>
+          </div>
+        </div>
+      </div>
+      <div class="alu">
+        <span>Unidad aritmético-lógica</span>
+        <div>
+          <div id="acumulador">
+            <input type="text" readonly id="acumulador-input" />
+            <span>Acumulador</span>
+          </div>
+          <div id="reg-entrada">
+            <input type="text" readonly id="reg-entrada-input" />
+            <span>Reg. Entrada</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <aside class="controles">
+      <button id="siguiente" class="boton">Siguiente paso</button>
+      <button class="boton" id="reiniciar">Reiniciar</button>
+    </aside>
+    <script src="optimizacion.js"></script>
+  </body>
+</html>
